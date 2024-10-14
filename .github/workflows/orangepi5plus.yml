@@ -66,8 +66,7 @@ jobs:
 
       - name: Build
         shell: bash
-        run: sudo ./build.sh --suite=${{ matrix.suite }} --flavor=${{ matrix.flavor }} --rootfs-only --launchpad
-
+        run: sudo ./build.sh --suite=${{ matrix.suite }} --flavor=${{ matrix.flavor }} --rootfs-only
       - name: Upload
         uses: actions/upload-artifact@v4.3.3
         with:
@@ -125,7 +124,7 @@ jobs:
 
       - name: Build
         shell: bash
-        run: sudo ./build.sh --board=${{ matrix.board }} --suite=${{ matrix.suite }} --flavor=${{ matrix.flavor }} --launchpad
+        run: sudo ./build.sh --board=${{ matrix.board }} --suite=${{ matrix.suite }} --flavor=${{ matrix.flavor }}
 
       - name: Upload
         if: needs.prepare_release.outputs.release_id != ''
