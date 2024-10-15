@@ -1,5 +1,5 @@
-name: Orangepi5plus
-run-name: Orangepi5plus
+name: Orangepi5plus-fix
+run-name: Orangepi5plus-fix
 
 on:
   workflow_dispatch:
@@ -10,7 +10,7 @@ permissions:
 jobs:
   prepare_release:
     name: Create release
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
