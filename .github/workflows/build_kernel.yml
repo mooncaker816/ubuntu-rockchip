@@ -1,9 +1,9 @@
-name: Build
+name: Build-kernel
 
 on:
   workflow_dispatch:
 
-run-name: Build
+run-name: Build-kernel
 
 jobs:
   kernel:
